@@ -7,7 +7,7 @@ public class FileReader {
         try (BufferedReader reader = new BufferedReader(new java.io.FileReader("sql/" + filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                sqlQuery.append(line + "\n");
+                sqlQuery.append(line).append("\n");
             }
         } catch (IOException e) {
             System.out.println("The file with instructions for creating the table does not exist");
